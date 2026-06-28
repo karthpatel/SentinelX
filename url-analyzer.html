@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SentinelX URL Threat Analyzer checks HTTPS, URL length, suspicious keywords, IP URLs, shorteners, and subdomains."
+    />
+    <title>SentinelX | URL Threat Analyzer</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="url-analyzer">
+    <header class="site-header" data-site-header>
+      <a class="brand" href="./index.html" aria-label="SentinelX home">
+        <span class="brand-mark">SX</span>
+        <span>SentinelX</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        data-nav-toggle
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-navigation" data-primary-nav>
+        <a href="./assessment.html">Assessment</a>
+        <a class="active" href="./url-analyzer.html" aria-current="page">URL Analyzer</a>
+        <a href="./scam-analyzer.html">Scam Analyzer</a>
+        <a href="./dashboard.html">Dashboard</a>
+      </nav>
+    </header>
+
+    <main class="assessment-main">
+      <section class="assessment-hero">
+        <div class="container dashboard-heading">
+          <div>
+            <p class="eyebrow">
+              <span class="live-dot"></span>
+              URL analyzer
+            </p>
+            <h1>Analyze suspicious URLs</h1>
+            <p>
+              Score a URL using local rule checks for HTTPS, suspicious wording,
+              IP hosts, shorteners, URL length, and excessive subdomains.
+            </p>
+          </div>
+
+          <div class="storage-status">
+            <span class="storage-pulse"></span>
+            Ready
+          </div>
+        </div>
+      </section>
+
+      <section class="assessment-section">
+        <div class="container analyzer-layout">
+          <form class="url-analyzer-form" data-url-analyzer-form>
+            <label class="url-input-group">
+              <span>URL to analyze</span>
+              <input
+                type="text"
+                name="url"
+                autocomplete="off"
+                inputmode="url"
+                placeholder="https://example.com/login"
+                data-url-input
+              />
+            </label>
+
+            <div class="assessment-alert" data-url-alert hidden></div>
+
+            <button class="button button-primary" type="submit">
+              Analyze Threat
+            </button>
+          </form>
+
+          <aside class="assessment-result analyzer-result" data-url-result>
+            <span class="result-kicker">Threat score</span>
+            <div class="result-score">
+              <strong data-url-score>0</strong>
+              <span>/100</span>
+            </div>
+            <div class="risk-badge" data-url-risk>Not analyzed</div>
+            <p data-url-summary>
+              Enter a URL to generate a local SentinelX threat score and
+              detailed explanation.
+            </p>
+          </aside>
+        </div>
+
+        <div class="container analyzer-details-grid">
+          <section class="recent-panel">
+            <div class="recent-panel-header">
+              <div>
+                <p class="eyebrow">Detailed explanation</p>
+                <h2>Rule findings</h2>
+              </div>
+            </div>
+            <div class="finding-list" data-url-findings>
+              <p class="empty-state">Analysis findings will appear here.</p>
+            </div>
+          </section>
+
+          <section class="recent-panel">
+            <div class="recent-panel-header">
+              <div>
+                <p class="eyebrow">Scan memory</p>
+                <h2>Recent scans</h2>
+              </div>
+              <a class="card-link" href="./dashboard.html">View dashboard</a>
+            </div>
+            <div class="recent-scan-list" data-url-history>
+              <p class="empty-state">No URL scans yet.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand footer-brand" href="./index.html" aria-label="SentinelX home">
+          <span class="brand-mark">SX</span>
+          <span>SentinelX</span>
+        </a>
+        <p>Review links before you trust them.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="./index.html">Home</a>
+          <a href="./assessment.html">Assessment</a>
+          <a href="./scam-analyzer.html">Scam Analyzer</a>
+          <a href="./dashboard.html">Dashboard</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

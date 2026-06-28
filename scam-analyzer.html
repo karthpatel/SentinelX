@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SentinelX Scam Message Analyzer checks SMS, WhatsApp, and email content for urgency, OTP requests, credential requests, reward scams, and suspicious links."
+    />
+    <title>SentinelX | Scam Message Analyzer</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="scam-analyzer">
+    <header class="site-header" data-site-header>
+      <a class="brand" href="./index.html" aria-label="SentinelX home">
+        <span class="brand-mark">SX</span>
+        <span>SentinelX</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        data-nav-toggle
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-navigation" data-primary-nav>
+        <a href="./assessment.html">Assessment</a>
+        <a href="./url-analyzer.html">URL Analyzer</a>
+        <a class="active" href="./scam-analyzer.html" aria-current="page">Scam Analyzer</a>
+        <a href="./dashboard.html">Dashboard</a>
+      </nav>
+    </header>
+
+    <main class="assessment-main">
+      <section class="assessment-hero">
+        <div class="container dashboard-heading">
+          <div>
+            <p class="eyebrow">
+              <span class="live-dot"></span>
+              Message analyzer
+            </p>
+            <h1>Analyze suspicious messages</h1>
+            <p>
+              Paste SMS, WhatsApp, or email content to estimate scam probability
+              from urgency, OTP requests, credential asks, rewards, and links.
+            </p>
+          </div>
+
+          <div class="storage-status">
+            <span class="storage-pulse"></span>
+            Ready
+          </div>
+        </div>
+      </section>
+
+      <section class="assessment-section">
+        <div class="container analyzer-layout">
+          <form class="url-analyzer-form message-analyzer-form" data-scam-analyzer-form>
+            <label class="url-input-group">
+              <span>Message type</span>
+              <select name="messageType" data-scam-type>
+                <option value="SMS">SMS</option>
+                <option value="WhatsApp">WhatsApp message</option>
+                <option value="Email">Email content</option>
+              </select>
+            </label>
+
+            <label class="url-input-group">
+              <span>Message content</span>
+              <textarea
+                name="message"
+                rows="10"
+                placeholder="Paste the message here..."
+                data-scam-input
+              ></textarea>
+            </label>
+
+            <div class="assessment-alert" data-scam-alert hidden></div>
+
+            <button class="button button-primary" type="submit">
+              Analyze Message
+            </button>
+          </form>
+
+          <aside class="assessment-result analyzer-result" data-scam-result>
+            <span class="result-kicker">Scam probability</span>
+            <div class="result-score">
+              <strong data-scam-score>0</strong>
+              <span>/100</span>
+            </div>
+            <div class="risk-badge" data-scam-risk>Not analyzed</div>
+            <p data-scam-summary>
+              Paste a message to generate a SentinelX scam probability score and
+              detailed explanation.
+            </p>
+          </aside>
+        </div>
+
+        <div class="container analyzer-details-grid">
+          <section class="recent-panel">
+            <div class="recent-panel-header">
+              <div>
+                <p class="eyebrow">Detailed explanation</p>
+                <h2>Scam indicators</h2>
+              </div>
+            </div>
+            <div class="finding-list" data-scam-findings>
+              <p class="empty-state">Analysis findings will appear here.</p>
+            </div>
+          </section>
+
+          <section class="recent-panel">
+            <div class="recent-panel-header">
+              <div>
+                <p class="eyebrow">Analysis memory</p>
+                <h2>Recent analyses</h2>
+              </div>
+              <a class="card-link" href="./dashboard.html">View dashboard</a>
+            </div>
+            <div class="recent-scan-list" data-scam-history>
+              <p class="empty-state">No scam analyses yet.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand footer-brand" href="./index.html" aria-label="SentinelX home">
+          <span class="brand-mark">SX</span>
+          <span>SentinelX</span>
+        </a>
+        <p>Pause, check the message, then decide.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="./index.html">Home</a>
+          <a href="./assessment.html">Assessment</a>
+          <a href="./url-analyzer.html">URL Analyzer</a>
+          <a href="./dashboard.html">Dashboard</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

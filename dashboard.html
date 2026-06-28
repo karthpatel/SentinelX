@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SentinelX dashboard for cyber hygiene, URL scan, QR scan, and scam analysis statistics."
+    />
+    <title>SentinelX | Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="dashboard">
+    <header class="site-header" data-site-header>
+      <a class="brand" href="./index.html" aria-label="SentinelX home">
+        <span class="brand-mark">SX</span>
+        <span>SentinelX</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        data-nav-toggle
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-navigation" data-primary-nav>
+        <a href="./assessment.html">Assessment</a>
+        <a href="./url-analyzer.html">URL Analyzer</a>
+        <a href="./scam-analyzer.html">Scam Analyzer</a>
+        <a class="active" href="./dashboard.html" aria-current="page">Dashboard</a>
+      </nav>
+    </header>
+
+    <main class="dashboard-main">
+      <section class="dashboard-hero">
+        <div class="container dashboard-heading">
+          <div>
+            <p class="eyebrow">
+              <span class="live-dot"></span>
+              Dashboard
+            </p>
+            <h1>Security overview</h1>
+            <p>
+              Current SentinelX posture across cyber hygiene, URLs, QR codes,
+              and scam analysis statistics.
+            </p>
+          </div>
+
+          <div class="storage-status" data-storage-status>
+            <span class="storage-pulse"></span>
+            Ready
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-section" aria-label="SentinelX statistics cards">
+        <div class="container dashboard-grid">
+          <article class="dashboard-card score-card" style="margin-bottom: 16px;">
+            <div class="card-topline">
+              <span class="card-icon icon-shield"></span>
+              <div>
+                <h2>Cyber Hygiene Score</h2>
+                <p data-hygiene-status>Assessment not started</p>
+              </div>
+            </div>
+
+            <div class="score-content" style="margin-top: 8px;">
+              <div class="score-ring" data-score-ring style="--score: 0">
+                <strong id="hygiene-score">0</strong>
+                <span>/100</span>
+              </div>
+
+              <dl class="card-breakdown">
+                <div>
+                  <dt>Questions Answered</dt>
+                  <dd id="hygiene-completed">0</dd>
+                </div>
+                <div>
+                  <dt>Risk Level</dt>
+                  <dd id="hygiene-risk">Not assessed</dd>
+                </div>
+                <div>
+                  <dt>Last Assessment</dt>
+                  <dd id="hygiene-updated">Pending</dd>
+                </div>
+              </dl>
+            </div>
+
+            <a class="card-link" href="./assessment.html">Run cyber hygiene assessment</a>
+          </article>
+
+          <article class="dashboard-card">
+            <div class="card-topline">
+              <span class="card-icon icon-link"></span>
+              <div>
+                <h2>URL Scan Statistics</h2>
+                <p id="url-updated">No scan recorded</p>
+              </div>
+            </div>
+
+            <div class="primary-metric">
+              <span>Total URL scans</span>
+              <strong id="url-total">0</strong>
+            </div>
+
+            <div class="risk-bars" aria-label="URL scan distribution">
+              <span class="risk-safe" id="url-safe-bar"></span>
+              <span class="risk-warning" id="url-suspicious-bar"></span>
+              <span class="risk-danger" id="url-malicious-bar"></span>
+            </div>
+
+            <dl class="metric-row">
+              <div>
+                <dt>Safe</dt>
+                <dd id="url-safe">0</dd>
+              </div>
+              <div>
+                <dt>Suspicious</dt>
+                <dd id="url-suspicious">0</dd>
+              </div>
+              <div>
+                <dt>Malicious</dt>
+                <dd id="url-malicious">0</dd>
+              </div>
+            </dl>
+
+            <a class="card-link" href="./url-analyzer.html">Analyze a URL</a>
+          </article>
+
+
+
+          <article class="dashboard-card">
+            <div class="card-topline">
+              <span class="card-icon icon-pattern"></span>
+              <div>
+                <h2>Scam Analysis Statistics</h2>
+                <p id="scam-updated">No analysis recorded</p>
+              </div>
+            </div>
+
+            <div class="primary-metric">
+              <span>Total scam analyses</span>
+              <strong id="scam-total">0</strong>
+            </div>
+
+            <div class="risk-bars" aria-label="Scam analysis distribution">
+              <span class="risk-safe" id="scam-low-bar"></span>
+              <span class="risk-warning" id="scam-medium-bar"></span>
+              <span class="risk-danger" id="scam-high-bar"></span>
+            </div>
+
+            <dl class="metric-row">
+              <div>
+                <dt>Low Risk</dt>
+                <dd id="scam-low">0</dd>
+              </div>
+              <div>
+                <dt>Medium</dt>
+                <dd id="scam-medium">0</dd>
+              </div>
+              <div>
+                <dt>High Risk</dt>
+                <dd id="scam-high">0</dd>
+              </div>
+            </dl>
+
+            <a class="card-link" href="./scam-analyzer.html">Analyze a message</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="dashboard-section recent-scan-section" aria-label="Recent threat analyses">
+        <div class="container recent-dashboard-grid">
+          <div class="recent-panel">
+            <div class="recent-panel-header">
+              <div>
+                <p class="eyebrow">URL threat intelligence</p>
+                <h2>Recent URL scans</h2>
+              </div>
+              <a class="card-link" href="./url-analyzer.html">Run new scan</a>
+            </div>
+
+            <div class="recent-scan-list" data-recent-url-scans>
+              <p class="empty-state">No URL scans yet.</p>
+            </div>
+          </div>
+
+          <div class="recent-panel">
+            <div class="recent-panel-header">
+              <div>
+                <p class="eyebrow">Scam signal intelligence</p>
+                <h2>Recent scam analyses</h2>
+              </div>
+              <a class="card-link" href="./scam-analyzer.html">Run new analysis</a>
+            </div>
+
+            <div class="recent-scan-list" data-recent-scam-analyses>
+              <p class="empty-state">No scam analyses yet.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand footer-brand" href="./index.html" aria-label="SentinelX home">
+          <span class="brand-mark">SX</span>
+          <span>SentinelX</span>
+        </a>
+        <p>Your latest security results at a glance.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="./index.html">Home</a>
+          <a href="./assessment.html">Assessment</a>
+          <a href="./url-analyzer.html">URL Analyzer</a>
+          <a href="./scam-analyzer.html">Scam Analyzer</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

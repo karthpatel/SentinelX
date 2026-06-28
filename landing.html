@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SentinelX landing page with a featured introduction and an end section that shares details about the creator."
+    />
+    <title>SentinelX | Landing</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="landing">
+    <header class="site-header" data-site-header>
+      <a class="brand" href="./index.html" aria-label="SentinelX home">
+        <span class="brand-mark">SX</span>
+        <span>SentinelX</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        data-nav-toggle
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-navigation" data-primary-nav>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="./assessment.html">Modules</a>
+        <a href="./dashboard.html">Dashboard</a>
+        <a href="./scam-analyzer.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <canvas class="hero-canvas" data-threat-canvas aria-hidden="true"></canvas>
+        <div class="hero-vignette" aria-hidden="true"></div>
+
+        <div class="container hero-content">
+          <p class="eyebrow">
+            <span class="live-dot"></span>
+            Everyday cybersecurity
+          </p>
+          <h1>Know before you click.</h1>
+          <p class="hero-lede">
+            SentinelX helps you run quick cyber-hygiene checks, inspect suspicious
+            URLs, and evaluate scam messages—so you can make safer decisions
+            with confidence.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="./assessment.html">
+              <span class="button-icon icon-dashboard"></span>
+              Start Assessment
+            </a>
+            <a class="button button-secondary" href="./url-analyzer.html">
+              <span class="button-icon icon-grid"></span>
+              Analyze URL
+            </a>
+            <a class="button button-secondary" href="./scam-analyzer.html">
+              <span class="button-icon icon-grid"></span>
+              Check Message
+            </a>
+          </div>
+
+          <dl class="hero-metrics" aria-label="SentinelX platform metrics">
+            <div>
+              <dt>15</dt>
+              <dd>Hygiene questions</dd>
+            </div>
+            <div>
+              <dt>100</dt>
+              <dd>Risk score scale</dd>
+            </div>
+            <div>
+              <dt>1</dt>
+              <dd>Unified dashboard</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section features-section" id="features">
+        <div class="container">
+          <div class="section-intro">
+            <p class="eyebrow">Built for clarity</p>
+            <h2>Simple checks. Clear next steps.</h2>
+            <p>
+              Each tool provides an easy-to-read result and practical
+              recommendations—so your “what now?” is answered immediately.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="feature-icon icon-shield"></span>
+              <h3>Cyber Hygiene Assessment</h3>
+              <p>
+                A quick 15-question review across passwords, MFA, public Wi‑Fi,
+                updates, backups, and privacy.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-icon icon-link"></span>
+              <h3>URL Threat Analyzer</h3>
+              <p>
+                Scans suspicious signals like missing HTTPS, shorteners, IP hosts,
+                and phishing keyword patterns.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-icon icon-qr"></span>
+              <h3>Security Dashboard</h3>
+              <p>
+                Tracks hygiene, URL scan history, scam analysis counts, and recent
+                findings in one place.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-icon icon-pattern"></span>
+              <h3>Scam Message Analyzer</h3>
+              <p>
+                Detects scam language like urgency, OTP requests, credential asks,
+                reward hooks, and suspicious links.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section stats-section" id="about">
+
+        <div class="container stats-layout">
+          <div class="section-intro compact">
+            <p class="eyebrow">End page details</p>
+            <h2>About you (the creator).</h2>
+            <p>
+              Add your details here. The card below is ready for your name,
+              role, and what you want people to know.
+            </p>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card">
+              <span>Your name</span>
+              <strong data-counter="1">You</strong>
+              <p>
+                Replace this with your name, e.g. “Karthik” or your preferred display name.
+              </p>
+            </article>
+
+            <article class="stat-card">
+              <span>Your role</span>
+              <strong data-counter="1">Builder</strong>
+              <p>
+                Replace this with your role, e.g. “Cybersecurity enthusiast”, “Developer”, or “Founder”.
+              </p>
+            </article>
+
+            <article class="stat-card">
+              <span>Your mission</span>
+              <strong data-counter="1">Protect</strong>
+              <p>
+                Replace this with a one-liner mission statement like: “Making scam detection simple for everyone.”
+              </p>
+            </article>
+
+            <article class="stat-card">
+              <span>Next step</span>
+              <strong data-counter="1">Join</strong>
+              <p>
+                Link to your socials or add a CTA inside your footer/links section.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand footer-brand" href="./index.html" aria-label="SentinelX home">
+          <span class="brand-mark">SX</span>
+          <span>SentinelX</span>
+        </a>
+        <p>Security checks for everyday digital decisions.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="./index.html">Home</a>
+          <a href="./assessment.html">Assessment</a>
+          <a href="./url-analyzer.html">URL Analyzer</a>
+          <a href="./scam-analyzer.html">Scam Analyzer</a>
+          <a href="./dashboard.html">Dashboard</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
+

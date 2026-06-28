@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SentinelX cyber hygiene assessment for passwords, MFA, WiFi, updates, backups, privacy, and awareness."
+    />
+    <title>SentinelX | Cyber Hygiene Assessment</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="assessment">
+    <header class="site-header" data-site-header>
+      <a class="brand" href="./index.html" aria-label="SentinelX home">
+        <span class="brand-mark">SX</span>
+        <span>SentinelX</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        data-nav-toggle
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-navigation" data-primary-nav>
+        <a class="active" href="./assessment.html" aria-current="page">Assessment</a>
+        <a href="./url-analyzer.html">URL Analyzer</a>
+        <a href="./scam-analyzer.html">Scam Analyzer</a>
+        <a href="./dashboard.html">Dashboard</a>
+      </nav>
+    </header>
+
+    <main class="assessment-main">
+      <section class="assessment-hero">
+        <div class="container dashboard-heading">
+          <div>
+            <p class="eyebrow">
+              <span class="live-dot"></span>
+              Cyber hygiene
+            </p>
+            <h1>Cyber Hygiene Assessment</h1>
+            <p>
+              Answer 15 security awareness questions to calculate your hygiene
+              score, risk level, and personalized next steps and be your own human firewall.
+            </p>
+          </div>
+
+          <div class="storage-status">
+            <span class="storage-pulse"></span>
+            15 questions
+          </div>
+        </div>
+      </section>
+
+      <section class="assessment-section">
+        <div class="container assessment-layout">
+          <form class="assessment-form" data-assessment-form>
+            <div class="assessment-progress">
+              <div>
+                <span>Assessment progress</span>
+                <strong data-assessment-progress-text>0/15 answered</strong>
+              </div>
+              <div class="assessment-progress-track">
+                <span data-assessment-progress-bar></span>
+              </div>
+            </div>
+
+            <div class="assessment-alert" data-assessment-alert hidden></div>
+            <div class="question-list" data-assessment-questions></div>
+
+            <div class="assessment-actions">
+              <button class="button button-primary" type="submit">
+                Calculate Score
+              </button>
+              <button class="button button-secondary" type="button" data-assessment-reset>
+                Reset Answers
+              </button>
+            </div>
+          </form>
+
+          <aside class="assessment-result" data-assessment-result>
+            <span class="result-kicker">Latest result</span>
+            <div class="result-score">
+              <strong data-result-score>0</strong>
+              <span>/100</span>
+            </div>
+            <div class="risk-badge" data-result-risk>Not assessed</div>
+            <p data-result-summary>
+              Complete the assessment to generate your SentinelX cyber hygiene
+              score.
+            </p>
+
+            <div class="recommendation-block">
+              <h2>Recommendations</h2>
+              <ul data-result-recommendations>
+                <li>Your recommendations will appear after scoring.</li>
+              </ul>
+            </div>
+
+            <a class="card-link" href="./dashboard.html">View dashboard score</a>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand footer-brand" href="./index.html" aria-label="SentinelX home">
+          <span class="brand-mark">SX</span>
+          <span>SentinelX</span>
+        </a>
+        <p>Build stronger habits with a clear security score.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="./index.html">Home</a>
+          <a href="./dashboard.html">Dashboard</a>
+          <a href="./url-analyzer.html">URL Analyzer</a>
+          <a href="./scam-analyzer.html">Scam Analyzer</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

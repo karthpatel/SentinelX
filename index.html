@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SentinelX helps users assess cyber hygiene, analyze suspicious URLs, and review scam messages from one clear dashboard."
+    />
+    <title>SentinelX | Cybersecurity Intelligence</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="home">
+    <header class="site-header" data-site-header>
+      <a class="brand" href="./index.html" aria-label="SentinelX home">
+        <span class="brand-mark">SX</span>
+        <span>SentinelX</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        data-nav-toggle
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-navigation" data-primary-nav>
+        <a href="./assessment.html">Assessment</a>
+        <a href="./url-analyzer.html">URL Analyzer</a>
+        <a href="./scam-analyzer.html">Scam Analyzer</a>
+        <a href="./dashboard.html">Dashboard</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <canvas class="hero-canvas" data-threat-canvas aria-hidden="true"></canvas>
+        <div class="hero-vignette" aria-hidden="true"></div>
+
+        <div class="container hero-content">
+          <p class="eyebrow">
+            <span class="live-dot"></span>
+            Threat posture intelligence
+          </p>
+          <h1>SentinelX</h1>
+          <p class="hero-lede">
+            Assess your security habits, inspect suspicious URLs, and review
+            messages for scam signals before you act.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="./assessment.html">
+              <span class="button-icon icon-dashboard"></span>
+              Start Assessment
+            </a>
+            <a class="button button-secondary" href="./url-analyzer.html">
+              <span class="button-icon icon-grid"></span>
+              Analyze URL
+            </a>
+            <a class="button button-secondary" href="./scam-analyzer.html">
+              <span class="button-icon icon-grid"></span>
+              Check Message
+            </a>
+          </div>
+
+          <dl class="hero-metrics" aria-label="SentinelX platform metrics">
+            <div>
+              <dt>03</dt>
+              <dd>Security Tools</dd>
+            </div>
+            <div>
+              <dt>0-100</dt>
+              <dd>Risk Scores</dd>
+            </div>
+            <div>
+              <dt>1</dt>
+              <dd>Dashboard</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section features-section" id="features">
+        <div class="container">
+          <div class="section-intro">
+            <p class="eyebrow">Security toolkit</p>
+            <h2>Clear checks for everyday digital risk.</h2>
+            <p>
+              SentinelX focuses on practical signals people can understand:
+              habits, suspicious links, scam language, and recent activity.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="feature-icon icon-shield"></span>
+              <h3>Cyber Hygiene Assessment</h3>
+              <p>
+                A 15-question awareness check that scores password habits, MFA,
+                public WiFi behavior, updates, backups, and privacy.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-icon icon-link"></span>
+              <h3>URL Threat Analyzer</h3>
+              <p>
+                Check HTTPS, URL length, suspicious words, IP links, shorteners,
+                and excessive subdomains.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-icon icon-qr"></span>
+              <h3>Security Dashboard</h3>
+              <p>
+                See hygiene score, URL scan trends, scam analysis counts, and
+                recent findings in one place.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-icon icon-pattern"></span>
+              <h3>Scam Message Analyzer</h3>
+              <p>
+                Paste SMS, WhatsApp, or email content to detect urgency, OTP
+                requests, credential asks, reward scams, and suspicious links.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section stats-section" id="statistics">
+        <div class="container stats-layout">
+          <div class="section-intro compact">
+            <p class="eyebrow">What it checks</p>
+            <h2>Fast signals, simple scores.</h2>
+            <p>
+              Each analyzer returns a score, risk level, and plain-English
+              explanation so the next action is obvious.
+            </p>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card">
+              <span>Hygiene check</span>
+              <strong data-counter="15">0</strong>
+              <p>Awareness questions across passwords, MFA, WiFi, updates, backups, and privacy.</p>
+            </article>
+
+            <article class="stat-card">
+              <span>URL signals</span>
+              <strong data-counter="6">0</strong>
+              <p>Checks for HTTPS, length, keywords, IP hosts, shorteners, and subdomains.</p>
+            </article>
+
+            <article class="stat-card">
+              <span>Scam signals</span>
+              <strong data-counter="5">0</strong>
+              <p>Looks for urgency, OTP requests, credentials, rewards, and suspicious links.</p>
+            </article>
+
+            <article class="stat-card">
+              <span>Risk scoring</span>
+              <strong>100</strong>
+              <p>Every score maps to a clear low, moderate, or high risk level.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand footer-brand" href="./index.html" aria-label="SentinelX home">
+          <span class="brand-mark">SX</span>
+          <span>SentinelX</span>
+        </a>
+        <p>Security checks for everyday digital decisions.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="./assessment.html">Assessment</a>
+          <a href="./url-analyzer.html">URL Analyzer</a>
+          <a href="./scam-analyzer.html">Scam Analyzer</a>
+          <a href="./dashboard.html">Dashboard</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
